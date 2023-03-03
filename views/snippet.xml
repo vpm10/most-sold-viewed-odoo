@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="external_snippets" inherit_id="website.snippets"
+              priority="22">
+        <xpath expr="//div[@id='snippet_effect']//t[@t-snippet][last()]"
+               position="after">
+            <t t-snippet="most_viewed_sold_pdt.sold_viewed_snippet"/>
+        </xpath>
+    </template>
+</odoo>

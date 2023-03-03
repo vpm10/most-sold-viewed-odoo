@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template">
+        <t t-name="most_viewed_sold_pdt.product">
+            <div class="initial">
+                <div class="container">
+                    <section class="s_carousel_wrapper" data-vxml="001">
+                    <div t-attf-id="myCarousel{{uniq}}"
+                         class="s_carousel s_carousel_default carousel slide"
+                         data-bs-interval="10000">
+
+                        <div style="position:relative; left:500px;">
+                            <br/>
+                            <h3><b>Most Viewed Product</b></h3>
+                        </div>
+                        <div id="slideshow_sample" class="carousel slide"
+                             data-bs-ride="carousel" data-bs-interval="10000"
+                             style="margin: 70px">
+                        <div class="carousel-inner">
+                            <div class="row">
+
+                        <t t-foreach="result" t-as="product">
+                            <div t-attf-class="carousel-item #{ product.set_active ? 'active': ''}">
+                                <div class="row">
+                            <t t-foreach="product" t-as="pro">
+
+                                <div class="col-md-3">
+                                <div class="content">
+                                    <form>
+                                <a t-attf-href="/shop/product/#{pro[1]}">
+                                <img t-attf-src="/web/image/product.template/{{pro[1]}}/image_1920"
+                                     class="img oe_product_image"
+                                     width="180"
+                                     height="150"/>
+                                    <div>
+                                    <span t-esc="pro[0]"/>
+                                    </div>
+                                </a>
+                                        <div class="cont">
+                                    <t t-if="pro[2]">
+                                        <span t-esc="pro[2]"/>
+                                          </t>
+                                    </div>
+                                    </form>
+                                    </div>
+                            </div>
+
+                                </t>
+                                 </div>
+                            </div>
+
+                        </t>
+
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    </section>
+                </div>
+
+            <a class="carousel-control-prev o_not_editable"
+               contenteditable="false" t-attf-href="#myCarousel{{uniq}}"
+               data-bs-slide="prev" role="img" aria-label="Previous"
+               title="Previous">
+        <span class="carousel-control-prev-icon" style="background-color: black; position:relative; right:80px; border-radius: 30px;"/>
+                <span class="visually-hidden">Previous</span>
+    </a>
+            <a class="carousel-control-next o_not_editable"
+               contenteditable="false" t-attf-href="#myCarousel{{uniq}}"
+               data-bs-slide="next" role="img" aria-label="Next" title="Next">
+        <span class="carousel-control-next-icon" style="background-color: black; position:relative; left:70px; border-radius: 30px;"/>
+                <span class="visually-hidden">Next</span>
+    </a>
+ </div>
+        </t>
+    <t t-name="most_viewed_sold_pdt.most_sold">
+            <div class="initial">
+                <div class="container">
+                    <section class="s_carousel_wrapper" data-vxml="001">
+                    <div t-attf-id="Carousel{{uniq}}"
+                         class="s_carousel s_carousel_default carousel slide"
+                         data-bs-interval="10000">
+
+                        <div style="position:relative; left:500px;">
+                            <br/>
+                            <h3><b>Most Sold Product</b></h3>
+                        </div>
+                        <div id="slideshow_sample" class="carousel slide"
+                             data-bs-ride="carousel" data-bs-interval="10000"
+                             style="margin: 70px">
+                        <div class="carousel-inner">
+                            <div class="row">
+
+                        <t t-foreach="result1" t-as="product">
+                            <div t-attf-class="carousel-item #{ product.set_active ? 'active': ''}">
+                                <div class="row">
+                            <t t-foreach="product" t-as="pro">
+
+                                <div class="col-md-3">
+                                <div class="content">
+                                    <form>
+                                <a t-attf-href="/shop/product/#{pro[1]}">
+                                <img t-attf-src="/web/image/product.template/{{pro[1]}}/image_1920"
+                                     class="img oe_product_image"
+                                     width="180"
+                                     height="150"/>
+                                    <div>
+                                    <span t-esc="pro[0]"/>
+                                    </div>
+                                </a>
+                                        <div class="cont">
+                                    <t t-if="pro[2]">
+                                        <span t-esc="pro[2]"/>
+                                          </t>
+                                    </div>
+                                    </form>
+                                    </div>
+                            </div>
+
+                                </t>
+                                 </div>
+                            </div>
+
+                        </t>
+
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    </section>
+                </div>
+
+            <a class="carousel-control-prev o_not_editable"
+               contenteditable="false" t-attf-href="#Carousel{{uniq}}"
+               data-bs-slide="prev" role="img" aria-label="Previous"
+               title="Previous">
+        <span class="carousel-control-prev-icon" style="background-color: black; position:relative; right:80px; border-radius: 30px;"/>
+                <span class="visually-hidden">Previous</span>
+    </a>
+            <a class="carousel-control-next o_not_editable"
+               contenteditable="false" t-attf-href="#Carousel{{uniq}}"
+               data-bs-slide="next" role="img" aria-label="Next" title="Next">
+        <span class="carousel-control-next-icon" style="background-color: black; position:relative; left:70px; border-radius: 30px;"/>
+                <span class="visually-hidden">Next</span>
+    </a>
+ </div>
+        </t>
+    </templates>

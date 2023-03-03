@@ -1,0 +1,28 @@
+.content{
+padding-top: 20px;
+padding-left: 20px;
+padding: 30px;
+background-color:#eee;
+border-style: outset;
+text-align: center;
+}
+.cont{
+width: 200px;
+height: 35px;
+Overflow:hidden;
+max-height: 6rem;
+line-height: 2.5rem;
+text-overflow: ellipsis;
+white-space: nowrap;
+text-align: center;
+}
+.span{
+color: blue;
+max-width: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height:1px;
+}
+img{
+border-radius: 30px;
+}
